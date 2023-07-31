@@ -34,6 +34,7 @@ public:
 			mmap_file(n);
 		}
 
+		//= 使用Allocator进行构造。
 		explicit mmappable_vector(A alloc):
 			Base(alloc)
 		{
@@ -50,6 +51,7 @@ public:
 		{
 		}
 
+		//= 这个应该用的很多。
 		mmappable_vector(int n, T val, A alloc):
 			Base(n, val, alloc)
 		{
@@ -60,6 +62,7 @@ public:
 		{
 		}
 
+		//= 这个是使用vector来进行构造。
 		mmappable_vector(std::vector<T,std::allocator<T> > v):
 			std::vector<T,std::allocator<T> >(v)
 		{

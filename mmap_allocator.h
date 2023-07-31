@@ -31,6 +31,7 @@ public:
 
 		pointer allocate(size_type n, const void *hint=0)
 		{
+			// printf("Call Allocate : %d\n", n);
 			void *the_pointer;
 			if (get_verbosity() > 0) {
 				fprintf(stderr, "Alloc %zd bytes.\n", n*sizeof(T));
